@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kaila Ayu | Junior Network Engineer</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #07111f;
+    color: white;
+}
+
+header {
+    background: #0b192b;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid #18344d;
+}
+
+.logo {
+    color: #00d9ff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #00d9ff;
+}
+
+.hero {
+    min-height: 100vh;
+    padding: 130px 10% 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.hero-text h4 {
+    color: #00d9ff;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+    color: #00d9ff;
+}
+
+.hero-text p {
+    color: #a9bbce;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #00d9ff;
+    color: #07111f;
+    padding: 13px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+.network {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #00d9ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+    color: #00d9ff;
+    box-shadow: 0 0 40px #00d9ff33;
+}
+
+section {
+    padding: 90px 10%;
+}
+
+.title {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.title span {
+    color: #00d9ff;
+}
+
+.about {
+    background: #0b192b;
+    text-align: center;
+}
+
+.about > p {
+    max-width: 750px;
+    margin: auto;
+    color: #a9bbce;
+    line-height: 1.9;
+}
+
+.profile-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.info {
+    background: #10243a;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #173b55;
+}
+
+.info h3 {
+    color: #00d9ff;
+    margin-bottom: 10px;
+}
+
+.info p {
+    color: #a9bbce;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background: #10243a;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #173b55;
+    transition: .3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: #00d9ff;
+}
+
+.skill-card h3 {
+    color: #00d9ff;
+    margin-bottom: 12px;
+}
+
+.skill-card p {
+    color: #a9bbce;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.project {
+    background: #0b192b;
+    text-align: center;
+}
+
+.project-box {
+    background: #10243a;
+    padding: 35px;
+    border-radius: 10px;
+    border: 1px solid #173b55;
+}
+
+.project-box h3 {
+    color: #00d9ff;
+    margin-bottom: 15px;
+}
+
+.project-box p {
+    color: #a9bbce;
+    line-height: 1.8;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    color: #a9bbce;
+    margin-bottom: 25px;
+}
+
+footer {
+    background: #0b192b;
+    text-align: center;
+    padding: 25px;
+    color: #a9bbce;
+    border-top: 1px solid #17344d;
+}
+
+@media(max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 6px;
+        font-size: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 160px;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .network {
+        width: 220px;
+        height: 220px;
+        font-size: 60px;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-info {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">KA.</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#project">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section class="hero" id="home">
+
+    <div class="hero-text">
+        <h4>WELCOME TO MY PORTFOLIO</h4>
+
+        <h1>
+            Kaila <span>Ayu</span>
+        </h1>
+
+        <p>
+            Halo! Saya Kaila Ayu, siswa kelas X-TJKT
+            jurusan Teknik Jaringan Komputer dan Telekomunikasi.
+            Saya memiliki ketertarikan dalam dunia teknologi,
+            jaringan komputer, dan infrastruktur jaringan.
+            Saya sedang mengembangkan kemampuan untuk menjadi
+            seorang Junior Network Engineer.
+        </p>
+
+        <a href="#about" class="btn">Explore Portfolio</a>
+    </div>
+
+    <div class="network">
+        🌐
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <h2 class="title">About <span>Me</span></h2>
+
+    <p>
+        Perkenalkan, nama saya Kaila Ayu.
+        Saya merupakan siswa kelas X-TJKT dengan jurusan
+        Teknik Jaringan Komputer dan Telekomunikasi.
+        Saya tertarik mempelajari jaringan komputer,
+        konfigurasi perangkat jaringan, troubleshooting,
+        serta perkembangan teknologi informasi.
+        Saya terus belajar untuk meningkatkan kemampuan
+        dan pengalaman di bidang networking.
+    </p>
+
+    <div class="profile-info">
+
+        <div class="info">
+            <h3>Nama Lengkap</h3>
+            <p>Kaila Ayu</p>
+        </div>
+
+        <div class="info">
+            <h3>Kelas</h3>
+            <p>X-TJKT</p>
+        </div>
+
+        <div class="info">
+            <h3>Jurusan</h3>
+            <p>Teknik Jaringan Komputer dan Telekomunikasi</p>
+        </div>
+
+        <div class="info">
+            <h3>Profesi</h3>
+            <p>Junior Network Engineer</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+
+    <h2 class="title">My <span>Skills</span></h2>
+
+    <div class="skills">
+
+        <div class="skill-card">
+            <h3>🌐 Networking</h3>
+            <p>
+                Memahami dasar jaringan LAN, WAN,
+                topologi jaringan, dan komunikasi data.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>🔧 Network Configuration</h3>
+            <p>
+                Mempelajari konfigurasi router,
+                switch, dan access point.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>💻 TCP/IP</h3>
+            <p>
+                Memahami IP Address, subnetting,
+                gateway, dan protokol TCP/IP.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>📡 Wireless Network</h3>
+            <p>
+                Mempelajari jaringan wireless
+                dan teknologi Wi-Fi.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>🛠 Troubleshooting</h3>
+            <p>
+                Mempelajari cara menganalisis
+                dan mengatasi masalah jaringan.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>🔒 Network Security</h3>
+            <p>
+                Memahami dasar keamanan jaringan
+                dan perlindungan data.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROJECT -->
+<section class="project" id="project">
+
+    <h2 class="title">My <span>Projects</span></h2>
+
+    <div class="project-box">
+
+        <h3>Network Engineering Projects</h3>
+
+        <p>
+            Saya sedang mengembangkan kemampuan melalui
+            pembelajaran dan praktik di bidang TJKT.
+            Beberapa proyek yang akan saya dokumentasikan
+            meliputi simulasi topologi jaringan, konfigurasi
+            IP Address, instalasi jaringan, dan pengujian
+            konektivitas jaringan komputer.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <h2 class="title">Contact <span>Me</span></h2>
+
+    <p>
+        Terima kasih telah mengunjungi website portofolio saya.
+        Mari terhubung dan belajar bersama dalam dunia teknologi jaringan.
+    </p>
+
+    <a href="mailto:emailkamu@example.com" class="btn">
+        Send Email
+    </a>
+
+</section>
+
+<footer>
+    <p>
+        © 2026 Kaila Ayu.
+        Junior Network Engineer Portfolio.
+    </p>
+</footer>
+
+</body>
+</html>
